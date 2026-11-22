@@ -49,7 +49,7 @@ warning baseline is relaxed.
 ## Continue on another computer
 
 Clone this repository's `main` branch to obtain the passed product sources. The
-separate [handoff release](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/releases/tag/eymard-chapter01-handoff-20261026)
+separate [handoff release](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/releases/tag/eymard-chapter01-handoff-20261026)
 contains the continuation archive, its checksum and restoration instructions.
 Campaign gates, ledgers, audit outputs and proof receipts are intentionally
 outside product Git history. A fresh clone alone does not contain that state.
@@ -61,7 +61,7 @@ the downloaded `main` product checkout available separately. The source campaign
 retains its frozen base and is not rebased to the publication integration tree.
 
 Use released workflow `formalization-workflow-v7.5.4` from
-[formalization-collaboration](https://github.com/VSCL-x-VERITAS/formalization-collaboration).
+[formalization-collaboration](https://github.com/the-numerical-proving-ground/formalization-collaboration).
 The selected prospective full-family audit consumer is 2.2.1, with unchanged
 producer contract and native expression format 2.2.0. New run-local identifiers
 can exceed 999. Existing partial audits retain their original protocols and

@@ -1,6 +1,6 @@
 # Lean Computational Mathematics
 
-[![Lean CI](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/actions/workflows/lean_action_ci.yml/badge.svg?branch=main)](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/actions/workflows/lean_action_ci.yml)
+[![Lean CI](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/actions/workflows/lean_action_ci.yml/badge.svg?branch=main)](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/actions/workflows/lean_action_ci.yml)
 [![Lean](https://img.shields.io/badge/Lean-4.29.0--rc3-blue)](lean-toolchain)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -10,12 +10,14 @@ books and research papers. It contains reusable mathematics for floating-point
 error analysis, numerical stability, matrix algorithms, optimization,
 finite-volume methods, hyperbolic partial differential equations, and
 high-dimensional probability, together with source-correspondence modules.
+The library is VSCL (Verified Scientific Computing Library), a project of
+[The Numerical Proving Ground (TNPG)](https://tnpg.io/).
 
 > **Active development repository:**
-> [`VSCL-x-VERITAS/lean-computational-mathematics`](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics).
+> [`the-numerical-proving-ground/lean-computational-mathematics`](https://github.com/the-numerical-proving-ground/lean-computational-mathematics).
 > The [`AlexGeorgantzas` repository](https://github.com/AlexGeorgantzas/lean-numerical-stability)
 > is the upstream project history; new development, branches, and pull requests for
-> this continuation should target the VSCL-x-VERITAS repository.
+> this continuation should target the TNPG repository.
 
 The broader project name reflects these multiple source developments;
 numerical stability remains in scope. The canonical repository slug is
@@ -46,19 +48,19 @@ scopes above do not imply whole-book formalization.
 ## Current repository status
 
 The November 16, 2026 RandNLA checkpoint is published commit
-[`7640e654`](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/commit/7640e65477dfbb41019833063fe40ba5b3b9c35b).
+[`7640e654`](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/commit/7640e65477dfbb41019833063fe40ba5b3b9c35b).
 It completes statement and proof acceptance for all 31 obligations in the
 selected existing Drineas–Mahoney contribution. The final theorem was merged in
-[PR #50](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/pull/50);
+[PR #50](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/pull/50);
 the PR, merge-queue and
-[post-merge CI](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/actions/runs/43900337393/attempts/2)
+[post-merge CI](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/actions/runs/43900337393/attempts/2)
 passed. The source section below records the scope and qualifications.
 
 The repository-wide measurements below remain pinned to the November 9, 2026
 snapshot, published commit
-[`ee23e1ae`](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/commit/ee23e1ae09b607b19dd8b2c0848fe11c5d139b0f),
+[`ee23e1ae`](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/commit/ee23e1ae09b607b19dd8b2c0848fe11c5d139b0f),
 which adds Shenghao Yang's reviewed Nocedal–Wright Chapter 1 development in
-[PR #42](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/pull/42)
+[PR #42](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/pull/42)
 to the completed audited LeVeque Chapter 4 scope, the accepted Vershynin
 Chapter 4 scope and the Eymard Chapter 1 checkpoint.
 The measurements below come from a strict source scan of that revision and the
@@ -88,7 +90,7 @@ modules; test modules are counted separately. The source scan used
 `generate_baseline.py --skip-declarations --strict-source` in a clean checkout
 of the pinned revision, excluding local drafts.
 
-The exact snapshot's [main push CI](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/actions/runs/42555471529)
+The exact snapshot's [main push CI](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/actions/runs/42555471529)
 passed architecture and provenance checks, the library and test builds,
 `lake test`, and warning/lint enforcement. The badge tracks later `main` runs;
 a successful run certifies its own commit. CI also checks source placeholders,
@@ -268,7 +270,7 @@ rather than tracked in this repository.
 The completed audited scope of [Chapter 4](ComputationalMathematics/Source/LeVeque/Chapter04/)
 is available through
 [`Chapter04`](ComputationalMathematics/Source/LeVeque/Chapter04.lean).
-It was published in [PR #39](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/pull/39)
+It was published in [PR #39](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/pull/39)
 on November 4, 2026. Its PASS gate closes 137 formalization objects: 119 proved,
 11 reused and 7 source-discrepancy/correction closures. The gate binds 249
 distinct compiled Lean declarations, with only `Classical.choice`, `Quot.sound`
@@ -357,7 +359,7 @@ records the accepted scope and retained qualifications.
 
 The reviewed Chapter 1 development of *Numerical Optimization*, second edition,
 was published in
-[PR #42](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/pull/42).
+[PR #42](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/pull/42).
 It adds 39 Lean modules: eight reusable modules under
 [`ComputationalMathematics/Optimization/`](ComputationalMathematics/Optimization/)
 and 31 source modules, including entry points and a clarification companion,
@@ -442,7 +444,7 @@ Install Git and [elan](https://github.com/leanprover/elan), then clone the
 active repository to build current `main`:
 
 ```bash
-git clone https://github.com/VSCL-x-VERITAS/lean-computational-mathematics.git lean-computational-mathematics
+git clone https://github.com/the-numerical-proving-ground/lean-computational-mathematics.git lean-computational-mathematics
 cd lean-computational-mathematics
 lake exe cache get
 lake build ComputationalMathematics NumStabilityTest
@@ -522,7 +524,7 @@ Retain the package name `numStability` and pin a revision:
 ```toml
 [[require]]
 name = "numStability"
-git = "https://github.com/VSCL-x-VERITAS/lean-computational-mathematics"
+git = "https://github.com/the-numerical-proving-ground/lean-computational-mathematics"
 rev = "7640e65477dfbb41019833063fe40ba5b3b9c35b"
 ```
 
