@@ -1,9 +1,13 @@
 # Lean Computational Mathematics identity migration
 
+The [active repository](https://github.com/the-numerical-proving-ground/lean-computational-mathematics)
+is now under The Numerical Proving Ground. The records below describe the
+September 2026 repository cutover.
+
 The [implementation report](implementation-report.md) records the completed
 implementation and validation. Source commit `51c5540984780b0011f41739b9ddaf8e505b7c93`,
 tree `20298c7b62a6e75c6b4beba46c8b517d7d86f4fb`, passed
-[CI run 34021942176](https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/actions/runs/34021942176)
+[CI run 34021942176](https://github.com/the-numerical-proving-ground/lean-computational-mathematics/actions/runs/34021942176)
 at 12:45:10 UTC on 2026-09-06. Authenticated identity/axiom checks and strict
 full-graph comparison passed. Final documentation/main publication is recorded
 separately from this tested source commit in the external receipt and delivery.

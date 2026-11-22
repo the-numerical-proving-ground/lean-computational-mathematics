@@ -203,5 +203,5 @@ forwarders.
 
 - Initial tagged NumStability release.
 
-[Unreleased]: https://github.com/VSCL-x-VERITAS/lean-computational-mathematics/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/the-numerical-proving-ground/lean-computational-mathematics/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/AlexGeorgantzas/lean-numerical-stability/releases/tag/v0.1.0
