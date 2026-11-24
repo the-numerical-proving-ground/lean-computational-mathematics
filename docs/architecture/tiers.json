@@ -3,15 +3,15 @@
   "by_role": {
    "aggregate": 460,
    "internal": 5,
-   "reusable": 1336,
-   "source": 3197,
+   "reusable": 1348,
+   "source": 3199,
    "upstream": 5
   },
-  "exact_rules": 2098,
+  "exact_rules": 2110,
   "exact_rules_with_absent_file": 0,
   "prefix_rules": 28,
   "prefix_rules_deciding_nothing": 0,
-  "production_modules": 5003
+  "production_modules": 5017
  },
  "exact": {
   "ComputationalMathematics": "aggregate",
@@ -435,6 +435,8 @@
   "ComputationalMathematics.Analysis.Conditioning.InversePerturbation": "reusable",
   "ComputationalMathematics.Analysis.Eigenvalues": "aggregate",
   "ComputationalMathematics.Analysis.Eigenvalues.CourantFischer": "reusable",
+  "ComputationalMathematics.Analysis.Eigenvalues.HermitianL1": "reusable",
+  "ComputationalMathematics.Analysis.Eigenvalues.LoewnerOrder": "reusable",
   "ComputationalMathematics.Analysis.Eigenvalues.Multiplicity": "reusable",
   "ComputationalMathematics.Analysis.Eigenvalues.OrderedSpectrum": "reusable",
   "ComputationalMathematics.Analysis.Equidistribution": "aggregate",
@@ -491,6 +493,9 @@
   "ComputationalMathematics.Analysis.FloatingPointArithmetic.RoundToEvenLocalError": "reusable",
   "ComputationalMathematics.Analysis.FloatingPointArithmetic.Rounding": "reusable",
   "ComputationalMathematics.Analysis.FloatingPointArithmetic.StandardModel": "reusable",
+  "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Basic": "reusable",
+  "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Defs": "reusable",
+  "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.IntegerWords": "reusable",
   "ComputationalMathematics.Analysis.ForwardError": "reusable",
   "ComputationalMathematics.Analysis.FunctionalCalculus": "aggregate",
   "ComputationalMathematics.Analysis.FunctionalCalculus.OperatorLog": "aggregate",
@@ -640,12 +645,15 @@
   "ComputationalMathematics.Analysis.MatrixNorms.Hadamard": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.HadamardDeterminant": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.Lp": "reusable",
+  "ComputationalMathematics.Analysis.MatrixNorms.Nuclear.Basic": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.SpectralExtrema": "aggregate",
   "ComputationalMathematics.Analysis.MatrixNorms.SpectralExtrema.Basic": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.SpectralExtrema.PrincipalSubmatrices.Bounds": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.SpectralRadius": "reusable",
   "ComputationalMathematics.Analysis.MatrixNorms.UnitarilyInvariant": "reusable",
   "ComputationalMathematics.Analysis.MatrixSpectral": "reusable",
+  "ComputationalMathematics.Analysis.MatrixStructure.Bipartite.MassShift": "reusable",
+  "ComputationalMathematics.Analysis.MatrixStructure.Bipartite.ZeroMassSpectrum": "reusable",
   "ComputationalMathematics.Analysis.Monotonicity": "reusable",
   "ComputationalMathematics.Analysis.Nonassociativity": "reusable",
   "ComputationalMathematics.Analysis.Normed.Group.SequentialError": "reusable",
@@ -663,6 +671,7 @@
   "ComputationalMathematics.Analysis.OperatorNorms.Basic": "reusable",
   "ComputationalMathematics.Analysis.OperatorNorms.RealComplexification": "reusable",
   "ComputationalMathematics.Analysis.OperatorNorms.RealMatrix": "reusable",
+  "ComputationalMathematics.Analysis.OperatorNorms.RealMatrixEuclidean": "reusable",
   "ComputationalMathematics.Analysis.PartialDifferentialEquations.BlockDiagonalLinearSystem": "reusable",
   "ComputationalMathematics.Analysis.PartialDifferentialEquations.ConservationLaw": "reusable",
   "ComputationalMathematics.Analysis.PartialDifferentialEquations.ConservationLaws.BalanceLaw": "reusable",
@@ -1031,6 +1040,8 @@
   "ComputationalMathematics.Analysis.SingularValues.EckartYoung": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.ExtremeValues": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.FullColumnRank": "reusable",
+  "ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Basic": "reusable",
+  "ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Defs": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.InverseBounds": "aggregate",
   "ComputationalMathematics.Analysis.SingularValues.InverseBounds.All": "aggregate",
   "ComputationalMathematics.Analysis.SingularValues.InverseBounds.Gram": "reusable",
@@ -1038,6 +1049,7 @@
   "ComputationalMathematics.Analysis.SingularValues.InverseBounds.Rayleigh": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.InverseSVD": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.Isometries": "reusable",
+  "ComputationalMathematics.Analysis.SingularValues.MirskyL1": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.OrderedDecay": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.Projections": "reusable",
   "ComputationalMathematics.Analysis.SingularValues.PseudoinverseNorm": "reusable",
@@ -14396,6 +14408,44 @@
    "exception": null,
    "file_present": true,
    "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.Eigenvalues.HermitianL1",
+   "rationale": "Trace and nuclear-norm estimates for finite Hermitian eigenvalues.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.Eigenvalues.HermitianL1"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.Eigenvalues.LoewnerOrder",
+   "rationale": "Ordered eigenvalue and trace estimates under the Loewner order.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.Eigenvalues.LoewnerOrder"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
     "commit": "uncommitted-working-tree",
     "date": "2026-10-26T09:25:20Z",
     "determined_by": "phase161 additive reviewed support"
@@ -15665,6 +15715,63 @@
    },
    "role": "reusable",
    "rule_id": "exact:ComputationalMathematics.Analysis.FloatingPointArithmetic.StandardModel"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Basic",
+   "rationale": "Nearest-even rounding and relative error laws for unbounded binary arithmetic.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Basic"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Defs",
+   "rationale": "Unbounded binary format and native-value definitions.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.Defs"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.IntegerWords",
+   "rationale": "Exact small integers and a native counter in unbounded binary arithmetic.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.FloatingPointArithmetic.UnboundedBinary.IntegerWords"
   },
   {
    "exception": null,
@@ -20131,6 +20238,25 @@
   {
    "exception": null,
    "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.MatrixNorms.Nuclear.Basic",
+   "rationale": "Nuclear norm definitions and estimates for finite real matrices.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.MatrixNorms.Nuclear.Basic"
+  },
+  {
+   "exception": null,
+   "file_present": true,
    "identity_migration": {
     "baseline_commit": "718beac641a8094611dc249c3508a2f5415381a3",
     "map": "docs/migrations/lean-computational-mathematics/module-map.json",
@@ -20307,6 +20433,44 @@
    },
    "role": "reusable",
    "rule_id": "exact:ComputationalMathematics.Analysis.MatrixSpectral"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.MatrixStructure.Bipartite.MassShift",
+   "rationale": "Bipartite matrix structure and exact real scalar mass shifts.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.MatrixStructure.Bipartite.MassShift"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.MatrixStructure.Bipartite.ZeroMassSpectrum",
+   "rationale": "Spectral description of real bipartite matrices at zero mass.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.MatrixStructure.Bipartite.ZeroMassSpectrum"
   },
   {
    "exception": null,
@@ -20607,6 +20771,25 @@
    },
    "role": "reusable",
    "rule_id": "exact:ComputationalMathematics.Analysis.OperatorNorms.RealMatrix"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.OperatorNorms.RealMatrixEuclidean",
+   "rationale": "Comparison of Euclidean vector action and the induced real matrix norm.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.OperatorNorms.RealMatrixEuclidean"
   },
   {
    "exception": null,
@@ -26879,6 +27062,44 @@
   {
    "exception": null,
    "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Basic",
+   "rationale": "Full real singular vector families and their exact singular equations.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Basic"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Defs",
+   "rationale": "Singular values indexed by ascending real singular rank.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.SingularValues.FullRealSVD.Defs"
+  },
+  {
+   "exception": null,
+   "file_present": true,
    "identity_migration": {
     "baseline_commit": "718beac641a8094611dc249c3508a2f5415381a3",
     "map": "docs/migrations/lean-computational-mathematics/module-map.json",
@@ -27065,6 +27286,25 @@
    },
    "role": "reusable",
    "rule_id": "exact:ComputationalMathematics.Analysis.SingularValues.Isometries"
+  },
+  {
+   "exception": null,
+   "file_present": true,
+   "introduction": {
+    "commit": "7cfe1d9b35ebec262e26325810d1f156d777b74c",
+    "date": "2026-11-24T12:20:08-05:00"
+   },
+   "match_kind": "exact",
+   "module": "ComputationalMathematics.Analysis.SingularValues.MirskyL1",
+   "rationale": "A finite-dimensional nuclear-norm perturbation bound for singular values.",
+   "review": {
+    "evidence": "docs/architecture/certified-tridiagonal-foundations-20261124.md",
+    "review_date": "2026-11-24T17:31:35+00:00",
+    "reviewer": "Codex structure review",
+    "status": "accepted"
+   },
+   "role": "reusable",
+   "rule_id": "exact:ComputationalMathematics.Analysis.SingularValues.MirskyL1"
   },
   {
    "exception": null,
@@ -60559,7 +60799,7 @@
    },
    "match_kind": "prefix",
    "matches_component_boundary_only": true,
-   "modules_decided": 2314,
+   "modules_decided": 2464,
    "prefix": "ComputationalMathematics.Source",
    "rationale": "Chapter-specific formalization of the printed source argument.",
    "review": {

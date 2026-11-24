@@ -6,6 +6,7 @@ import ComputationalMathematics.Analysis.MatrixNorms.EntrywiseMaximum
 import ComputationalMathematics.Analysis.MatrixNorms.Hadamard
 import ComputationalMathematics.Analysis.MatrixNorms.HadamardDeterminant
 import ComputationalMathematics.Analysis.MatrixNorms.Lp
+import ComputationalMathematics.Analysis.MatrixNorms.Nuclear.Basic
 import ComputationalMathematics.Analysis.MatrixNorms.SpectralExtrema
 import ComputationalMathematics.Analysis.MatrixNorms.SpectralRadius
 import ComputationalMathematics.Analysis.MatrixNorms.UnitarilyInvariant

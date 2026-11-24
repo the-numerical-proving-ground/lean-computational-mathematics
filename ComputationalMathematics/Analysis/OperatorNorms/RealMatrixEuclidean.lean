@@ -1,5 +1,12 @@
 import ComputationalMathematics.Analysis.SingularValues.EckartYoung
 
+/-!
+# Euclidean action bounds for real matrices
+
+The induced operator norm controls the action on Euclidean vectors.
+Changing row and column signs preserves any such action bound.
+-/
+
 namespace NumStability.RealMatrixOperator
 
 open scoped BigOperators

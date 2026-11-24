@@ -1,5 +1,5 @@
 import ComputationalMathematics.Analysis.SingularValues.Transpose
-import ComputationalMathematics.Analysis.OperatorNorms.RealMatrix.Euclidean
+import ComputationalMathematics.Analysis.OperatorNorms.RealMatrixEuclidean
 import Mathlib.Tactic
 
 /-!
