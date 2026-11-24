@@ -201,7 +201,8 @@ theorem finEmbedding_charpoly {n : ℕ} (C : Matrix (Fin n) (Fin n) ℝ) :
   rw [hA, Matrix.charpoly_mul_comm]
   simp only [← Matrix.mul_assoc, hcol, Matrix.one_mul]
 
-private theorem eigenvalues₀_cast_eq_ordered {m : ℕ}
+/-- Mathlib’s ordered matrix eigenvalues agree with the Euclidean-space ordering. -/
+theorem eigenvalues₀_cast_eq_ordered {m : ℕ}
     {A : Matrix (Fin m) (Fin m) ℝ} (hA : A.IsHermitian) (i : Fin m) :
     hA.eigenvalues₀ (Fin.cast (Fintype.card_fin m).symm i) =
       hermitianOrderedEigenvalue hA i := by
@@ -217,7 +218,7 @@ private theorem eigenvalues₀_cast_eq_ordered {m : ℕ}
   exact hcast finrank_euclideanSpace finrank_euclideanSpace_fin (Fintype.card_fin m) i
 
 /-- Ordered-eigenvalue uniqueness for an ascending complete diagonal list. -/
-private theorem orderedEigenvalue_eq_of_charpoly_diagonal {m : ℕ}
+theorem orderedEigenvalue_eq_of_charpoly_diagonal {m : ℕ}
     {A : Matrix (Fin m) (Fin m) ℝ} (hA : A.IsHermitian) (d : Fin m → ℝ)
     (hd : Monotone d) (hc : A.charpoly = (diagonal d).charpoly) (i : Fin m) :
     hermitianOrderedEigenvalue hA i.rev = d i := by
